@@ -1,0 +1,134 @@
+CASE STUDY - GIT WORKFLOW
+.
+Prepare to work using a git-based hosting service.
+    Install git.
+    Configure git.
+    Create account on the git-based hosting service.
+
+
+Work on a project:
+    Prepare to work on a specific project.
+    Work on issues.
+
+
+Prepare to work on a specific project:
+    Fork the project.
+    Protect master.
+    Add each team member as a contributor to your fork.
+    For each team member, including yourself, have them:
+        Clone your fork.
+        Add an upstream remote to original project.
+    Create a board to manage your team.
+
+
+Work on issues:
+    Select an issue to work on.
+    Prepare to work on the issue.
+    Work on the issue.
+    Get maintainer to merge your work.
+    Clean up.
+
+
+Select an issue to work on:
+    Navigate to the original project on the hosting service.
+    Browse issue tracker for an issue to work on.
+    Make sure the issue is not being worked on.
+    Claim the issue.
+
+
+Make sure the issue is not being worked on:
+    Make sure all of the following are true:
+        No one is assigned to the issue.
+        No one has claimed the issue in a comment.
+        No pull-request is cross-linked with this issue.
+    If non of the above exist, the issue isn't being worked on.
+    If someone appears to be working on it:
+        If the issue is stale (no change in a while):
+            Ask if it is still being worked on
+            Express your interest to work on it.
+            Wait a reasonable amount of time for a response.
+            If no one responds, the issue isn't being worked on.
+
+
+Claim the issue:
+    If you are a collaborator on the project:
+        Assign yourself to the issue.
+    Otherwise:
+        Make a comment on the issue stating you are working on it.
+
+
+Prepare to work on the issue:
+    Create a branch to hold your work on the issue.
+    Publish the new branch to your fork.
+    Issue a pull-request from your new branch in your fork to master in upstream.
+
+
+Create a branch to hold your work on the issue:
+    Synchronize master in your clone and your fork with upstream's master.
+    Create a new branch off of master in your local repository.
+
+
+Synchronize master in your clone and your fork with upstream's master.
+    `git checkout master`
+    `git pull upstream master`
+    `git push origin master`
+
+
+Create a new branch off of master in your local repository.
+    `git checkout master`
+    `git branch new-branch-name`
+
+
+Publish the new branch to your fork:
+    `git checkout new-branch-name`
+    Make a small change
+    `git add .`
+    `git commit -s -m "Start work on issue #"`
+    `git push -u origin new-branch-name`
+
+
+Issue a pull-request from your new branch in your fork to master in upstream.
+    See directions on hosting service.
+
+
+Work on the issue:
+    Make sure you are in your clone's root directory.
+    Make sure the branch for the issue is checked out.
+    Make sure all of your tests currently pass.
+    Until session or work is done:
+        Make, test, commit, and push a small change.
+
+
+Make sure you are in your clone's root directory.
+Make sure the branch for the issue is checked out.
+Make sure all of your tests currently pass.
+Make, test, commit, and push a small change.
+
+
+Get maintainer to merge your work:
+    Synchronize your branch.
+    Request a review of your pull-request.
+    While your work is not merged:
+        If a maintainer has asks for changes:
+            Work on the issue.
+        Synchronize your branch.
+        Request a review of your pull-request.
+
+
+Synchronize your branch:
+    Synchronize master in your clone and your fork with upstream's master.
+    `git checkout the-branch-you-want-to-synchronize`
+    `git merge master`
+    Resolve any conflicts.
+    `git push`
+
+
+Request a review of your pull-request:
+    Navigate to pull-request.
+    See directions on hosting service.
+
+
+Clean up:
+    Synchronize master.
+    Delete local and remote branch.
+
